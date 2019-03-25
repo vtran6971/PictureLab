@@ -55,7 +55,25 @@ public static void testFixUnderwater()
   {
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-    caterpillar.mirrorVertical();
+    caterpillar.mirrorVerticalRightToLeft();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorHorizontal */
+  public static void testMirrorHorizontal()
+  {
+    Picture caterpillar = new Picture("redMotorcycle.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontal();
+    caterpillar.explore();
+  }
+
+  /** Method to test mirrorHorizontal */
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture caterpillar = new Picture("redMotorcycle.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorHorizontalBotToTop();
     caterpillar.explore();
   }
   
@@ -97,8 +115,10 @@ public static void testFixUnderwater()
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    testFixUnderwater();
+    //testFixUnderwater();
     //testMirrorVertical();
+    //testMirrorHorizontal();
+    testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();

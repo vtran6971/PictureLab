@@ -151,6 +151,58 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+  /** Method mirror a picture across a vertical line from right to left**/
+  public void mirrorVerticalRightToLeft()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int width = pixels[0].length;
+    for (int row = 0; row < pixels.length; row++)
+    {
+      for (int col = 0; col < width / 2; col++)
+      {
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[row][width - 1 - col];
+        leftPixel.setColor(rightPixel.getColor());
+      }
+    }
+  }
+
+  /** *Method to mirror a picture from top to bottom across a
+       horizontal line located at the middle of the image  **/
+  public void mirrorHorizontal()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel botPixel = null;
+    int height = pixels.length;
+    for (int row = 0; row < height; row++) {
+      for (int col = 0; col < pixels[0].length ; col++) {
+        topPixel = pixels[row][col];
+        botPixel = pixels[height - 1 - row][col];
+        botPixel.setColor(topPixel.getColor());
+      }
+    }
+  }
+
+  /** *Method to mirror a picture from bottom to the top across a
+   horizontal line located at the middle of the image  **/
+  public void mirrorHorizontalBotToTop()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel topPixel = null;
+    Pixel botPixel = null;
+    int height = pixels.length;
+    for (int row = 0; row < height; row++) {
+      for (int col = 0; col < pixels[0].length ; col++) {
+        botPixel = pixels[height - 1 - row][col];
+        topPixel = pixels[row][col];
+        topPixel.setColor(botPixel.getColor());
+      }
+    }
+  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
