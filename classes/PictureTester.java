@@ -62,21 +62,30 @@ public static void testFixUnderwater()
   /** Method to test mirrorHorizontal */
   public static void testMirrorHorizontal()
   {
-    Picture caterpillar = new Picture("redMotorcycle.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorHorizontal();
-    caterpillar.explore();
+    Picture motor = new Picture("redMotorcycle.jpg");
+    motor.explore();
+    motor.mirrorHorizontal();
+    motor.explore();
   }
 
   /** Method to test mirrorHorizontal */
   public static void testMirrorHorizontalBotToTop()
   {
-    Picture caterpillar = new Picture("redMotorcycle.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorHorizontalBotToTop();
-    caterpillar.explore();
+    Picture motor = new Picture("redMotorcycle.jpg");
+    motor.explore();
+    motor.mirrorHorizontalBotToTop();
+    motor.explore();
   }
-  
+
+  /** Method to test mirrorDiagonal */
+  public static void testMirrorDiagonal()
+  {
+    Picture motor = new Picture("redMotorcycle.jpg");
+    motor.explore();
+    motor.mirrorDiagonal();
+    motor.explore();
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -118,11 +127,11 @@ public static void testFixUnderwater()
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorHorizontal();
-    testMirrorHorizontalBotToTop();
+    //testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    //testMirrorDiagonal();
+    testMirrorDiagonal();
     //testCollage();
     //testCopy();
     //testEdgeDetection();

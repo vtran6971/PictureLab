@@ -223,6 +223,29 @@ public class Picture extends SimplePicture
       }
     } 
   }
+
+  /** Method to mirror an image over a diagonal line**/
+  public void mirrorDiagonal()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int ro = pixels.length-1;
+    int colm = pixels[0].length-1;
+    int col1 = -1;
+    for(int row = pixels.length; row >= 0; row++)
+    {
+      col1++;
+      for(int col = col1; col < pixels[0].length; col++)
+      {
+        rightPixel = pixels[row][col];
+        leftPixel = pixels[ro][colm];
+        rightPixel.setColor(leftPixel.getColor());
+      }
+      ro++;
+      colm--;
+    }
+  }
   
   /** Mirror just part of a picture of a temple */
   public void mirrorTemple()
