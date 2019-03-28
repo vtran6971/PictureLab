@@ -86,6 +86,11 @@ public static void testFixUnderwater()
     motor.explore();
   }
 
+  public static void testCopy()
+  {
+
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -131,9 +136,9 @@ public static void testFixUnderwater()
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
-    testMirrorDiagonal();
+    //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();

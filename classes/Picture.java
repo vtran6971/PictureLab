@@ -148,6 +148,10 @@ public class Picture extends SimplePicture
        {
          pixelObj.setBlue(0);
        }
+       else
+       {
+         pixelObj.setGreen(0);
+       }
       }
     }
   }
@@ -244,6 +248,24 @@ public class Picture extends SimplePicture
       }
       ro++;
       colm--;
+    }
+  }
+
+  public void copy2(Picture fromPic, int startRow, int startCol, int endRow, int endCol)
+  {
+    Pixel fromPixel = null;
+    Pixel toPixel = null;
+    Pixel[][] toPixels = this.getPixels2D();
+    Pixel[][] fromPixels = fromPic.getPixels2D();
+
+    for(int row = startRow; startRow < endRow; row++)
+    {
+      for(int col = startCol; startCol < endCol; col++)
+      {
+        fromPixel = fromPixels[fromRow][fromCol];
+        toPixel = toPixels[toRow][toCol];
+        toPixel.setColor(fromPixel.getColor());
+      }
     }
   }
   
