@@ -258,12 +258,14 @@ public class Picture extends SimplePicture
     Pixel[][] toPixels = this.getPixels2D();
     Pixel[][] fromPixels = fromPic.getPixels2D();
 
-    for(int row = startRow; startRow < endRow; row++)
+    for(int row = startRow,int row2;
+    row2 = startRow;
+    startRow < endRow; row++, row2++)
     {
       for(int col = startCol; startCol < endCol; col++)
       {
-        fromPixel = fromPixels[fromRow][fromCol];
-        toPixel = toPixels[toRow][toCol];
+        fromPixel = fromPixels[row][col];
+        toPixel = toPixels[][];
         toPixel.setColor(fromPixel.getColor());
       }
     }
